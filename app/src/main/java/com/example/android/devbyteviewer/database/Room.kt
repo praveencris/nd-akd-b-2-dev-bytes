@@ -26,13 +26,11 @@ import androidx.room.Query
 @Dao
 interface VideoDao {
 
-
     @Query("select * from databasevideo")
     fun getVideos(): List<DatabaseVideo>
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     fun insertAll(vararg databaseVideo: DatabaseVideo)
-
 }
 
 // DONE (02) Add SQL @Query getVideos() function that returns a List of DatabaseVideo.
